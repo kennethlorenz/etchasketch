@@ -69,3 +69,19 @@ button,
 .black {
   background-color: black;
 }
+
+.checkboxSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: bold;
+}
+
+.toggleText {
+  font-size: 2rem;
+}
+
+#toggle {
+  height: 3rem;
+  width: 3rem;
+}
