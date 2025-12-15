@@ -3,17 +3,25 @@ const BLACKBUTTON = document.querySelector("#black");
 const RANDOMBUTTON = document.querySelector("#random");
 const CLEARBUTTON = document.querySelector("#clear");
 const displayBorderToggle = document.querySelector("#toggle");
+const screenWidth = 50.2;
+const SLIDER = document.getElementById("slider");
+
+let dimension = 16;
 
 let selectedColor = "Black";
 let isMouseDown = false;
 
+function setSquareWidth(squareDimension) {
+  return screenWidth / squareDimension;
+}
+
 function generateSquares() {
-  let dimension = 16;
   let totalSquares = dimension * dimension;
 
   for (let row = 0; row < totalSquares; row++) {
     let square = document.createElement("div");
     square.classList.add("square");
+    square.style.width = `${setSquareWidth(dimension)}rem`;
     SQUARECONTAINER.appendChild(square);
   }
 }
@@ -95,15 +103,3 @@ function clearAllSquares() {
 }
 
 CLEARBUTTON.addEventListener("click", clearAllSquares);
-
-displayBorderToggle.addEventListener("change", (e) => {
-  if (e.target.checked === true) {
-    squares.forEach((square) => {
-      square.style.border = "1px solid black";
-    });
-  } else {
-    squares.forEach((square) => {
-      square.style.border = "none";
-    });
-  }
-});
