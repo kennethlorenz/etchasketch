@@ -20,7 +20,7 @@ generateSquares();
 let squares = document.querySelectorAll(".square");
 
 function fillBlackColor(element) {
-  element.classList.add("black");
+  element.style.backgroundColor = "black";
 }
 
 function fillRandomColor(element) {
