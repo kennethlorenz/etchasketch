@@ -2,6 +2,7 @@ const SQUARECONTAINER = document.querySelector("#square-container");
 const BLACKBUTTON = document.querySelector("#black");
 const RANDOMBUTTON = document.querySelector("#random");
 const CLEARBUTTON = document.querySelector("#clear");
+const displayBorderToggle = document.querySelector("#toggle");
 
 let selectedColor = "Black";
 let isMouseDown = false;
@@ -94,3 +95,15 @@ function clearAllSquares() {
 }
 
 CLEARBUTTON.addEventListener("click", clearAllSquares);
+
+displayBorderToggle.addEventListener("change", (e) => {
+  if (e.target.checked === true) {
+    squares.forEach((square) => {
+      square.style.border = "1px solid black";
+    });
+  } else {
+    squares.forEach((square) => {
+      square.style.border = "none";
+    });
+  }
+});
