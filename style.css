@@ -11,6 +11,32 @@ body {
   align-items: center;
 }
 
+main {
+  display: flex;
+  gap: 5rem;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.menu button {
+  padding: 1rem 5rem;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.menu button.active {
+  background-color: black;
+  color: white;
+}
+
+.menu button:hover {
+  transform: scale(1.25);
+}
+
 h1 {
   font-size: 3rem;
 }
@@ -23,10 +49,15 @@ footer {
 #square-container {
   height: 50.2rem;
   width: 50.2rem;
-  border: 0.5px solid #141414;
-  box-shadow: 0 0 5px 5px #141414;
   display: flex;
   flex-wrap: wrap;
+}
+
+button,
+#square-container {
+  border: 0.5px solid #141414;
+  box-shadow: 0 0 5px 5px #141414;
+  border-radius: 1rem;
 }
 
 .square {
