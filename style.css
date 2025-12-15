@@ -60,12 +60,6 @@ button,
   border-radius: 1rem;
 }
 
-.square {
-  border: 1px solid black;
-  height: 29.55px;
-  width: 29.55px;
-}
-
 .black {
   background-color: black;
 }
@@ -84,4 +78,43 @@ button,
 #toggle {
   height: 3rem;
   width: 3rem;
+}
+
+#sliderText {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #a4a4a4;
+  outline: none;
+  opacity: 0.9;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: #04aa6d;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: #04aa6d;
+  cursor: pointer;
 }
