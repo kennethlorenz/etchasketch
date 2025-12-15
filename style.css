@@ -1,0 +1,40 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+footer {
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+
+#square-container {
+  height: 50.2rem;
+  width: 50.2rem;
+  border: 0.5px solid #141414;
+  box-shadow: 0 0 5px 5px #141414;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.square {
+  border: 1px solid black;
+  height: 29.55px;
+  width: 29.55px;
+}
+
+.black {
+  background-color: black;
+}
