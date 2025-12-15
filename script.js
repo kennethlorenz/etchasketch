@@ -1,6 +1,7 @@
 const SQUARECONTAINER = document.querySelector("#square-container");
 const BLACKBUTTON = document.querySelector("#black");
 const RANDOMBUTTON = document.querySelector("#random");
+const CLEARBUTTON = document.querySelector("#clear");
 
 let selectedColor = "Black";
 let isMouseDown = false;
@@ -84,3 +85,12 @@ RANDOMBUTTON.addEventListener("click", () => {
   toggleActiveButton(RANDOMBUTTON, BLACKBUTTON);
   selectedColor = "Random";
 });
+
+function clearAllSquares() {
+  squares.forEach((square) => {
+    square.classList.remove("black");
+    square.style.backgroundColor = "white";
+  });
+}
+
+CLEARBUTTON.addEventListener("click", clearAllSquares);
